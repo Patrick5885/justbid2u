@@ -12,9 +12,7 @@ export default ({ env }) => {
       connection: {
         connectionString: env('DATABASE_URL'),
         // SSL is required for most cloud PostgreSQL providers
-        ssl: {
-          rejectUnauthorized: false, 
-        },
+        ssl: true,
       },
       pool: { 
         min: env.int('DATABASE_POOL_MIN', 2), 
