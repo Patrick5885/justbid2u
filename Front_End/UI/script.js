@@ -1,6 +1,8 @@
 const STRAPI_URL = 'http://localhost:1338'; // Standard Strapi port
 const API_NAME = 'new-imported-models';
-
+const API_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:1338' 
+  : 'https://your-app-name.onrender.com';
 
 // 1. Scroll Animation
 const reveal = () => {
@@ -22,7 +24,7 @@ let cars = [];
 async function getCarsFromStrapi() {
     console.log("Fetching cars from Strapi...");
     try {
-        const response = await fetch(`${STRAPI_URL}/api/${API_NAME}?populate=*`);
+        const response = await fetch(`${API_URL}/api/${API_NAME}?populate=*`);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const result = await response.json();
         
@@ -33,7 +35,7 @@ async function getCarsFromStrapi() {
             let imageUrl = "https://via.placeholder.com/400x300?text=No+Image";
             if (item.Car_Model_Gallery && item.Car_Model_Gallery.length > 0) {
                 // Strapi 5 Media fields are arrays of objects
-                imageUrl = STRAPI_URL + item.Car_Model_Gallery[0].url;
+                imageUrl = API_URL + item.Car_Model_Gallery[0].url;
             }
 
             return {
@@ -359,7 +361,7 @@ async function loadCarDetails() {
 
     try {
         // Fetch specific car details from Strapi 5 using documentId
-        const response = await fetch(`${STRAPI_URL}/api/${API_NAME}/${carId}?populate=*`);
+        const response = await fetch(`${API_URL}/api/${API_NAME}/${carId}?populate=*`);
         
         if (!response.ok) {
             throw new Error(`Failed to fetch car details: ${response.status}`);
@@ -408,7 +410,7 @@ async function loadCarDetails() {
         // Use Car_Model_Gallery as seen in your network response
         if (car.Car_Model_Gallery && car.Car_Model_Gallery.length > 0) {
             // Map the array to full URLs
-            slideImages = car.Car_Model_Gallery.map(img => STRAPI_URL + img.url);
+            slideImages = car.Car_Model_Gallery.map(img => API_URL + img.url);
 
             // Generate HTML for thumbnails
             if (thumbContainer) {
