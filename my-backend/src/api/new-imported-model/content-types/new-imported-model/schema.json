@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "new_imported_models",
+  "info": {
+    "singularName": "new-imported-model",
+    "pluralName": "new-imported-models",
+    "displayName": "New_Imported_Model"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Model_Name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Origin_Country": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Japan",
+        "UK",
+        "Australia"
+      ]
+    },
+    "Year": {
+      "type": "string",
+      "required": true
+    },
+    "Price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Specifications": {
+      "type": "string",
+      "required": true
+    },
+    "Grade": {
+      "type": "string",
+      "required": true
+    },
+    "Milage": {
+      "type": "string",
+      "required": true
+    },
+    "Car_Model_Gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Model_Status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Available",
+      "enum": [
+        "Available",
+        "Sold"
+      ]
+    }
+  }
+}

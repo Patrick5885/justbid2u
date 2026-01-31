@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Bid | Model Details</title>
+    <link rel="stylesheet" href="/Front_End/UI/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Just<span>Bid</span></div>
+
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Home</a></li>
+            <li><a href="stock_car_model.html">Browse Model</a></li>
+            <li><a href="auction_grades.html">Auction Grades</a></li>
+            <li><a href="verifiedAgent.html">Verified Agent</a></li>
+            <li><a href="find_us.html">Find Us Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container detail-page">
+        <div class="detail-gallery reveal">
+            <div class="main-img-container">
+                <img id="main-view" src="" alt="Main View">
+
+                <button class="gallery-nav-btn prev-btn" id="prev-btn" onclick="prevImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-nav-btn next-btn" id="next-btn" onclick="nextImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="image-counter" id="img-counter">1 / 10</div>
+            </div>
+
+            <div class="thumbnail-grid" id="thumbnails"></div>
+        </div>
+
+        <aside class="detail-info reveal">
+            <div class="info-header">
+                <span id="car-year" class="year"></span>
+                <h1 id="car-name"></h1>
+                <p id="car-price" class="price-large"></p>
+            </div>
+
+            <div class="spec-table">
+                <div class="spec-row"><span>Origin</span><strong id="car-origin"></strong></div>
+                <div class="spec-row"><span>Auction Grade</span><strong id="car-grade"></strong></div>
+                <div class="spec-row"><span>Mileage</span><strong id="car-mileage"></strong></div>
+                <div class="spec-row"><span>Status</span><strong id="car-status"></strong></div>
+            </div>
+
+            <div class="action-area">
+                <a href="#" id="whatsapp-btn" class="apply-btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> ENQUIRE VIA WHATSAPP NOW
+                </a>
+                <p class="small-print">Our specialist will reply on business hour</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo">Just<span>Bid</span></div>
+            <p>Your trusted partner for direct car imports.</p>
+            <p class="footer-text">For expert assistance and inquiries, please connect with one of our <a href="verifiedAgent.html" class="footer-link">Verified Agent</a></p>        
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="stock_car_model.html">Browse Model</a></li>
+                <li><a href="auction_grades.html">Auction Grades</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 JustBid. All Rights Reserved.
+    </div>
+</footer>
+
+    <script src="/Front_End/UI/script.js"></script>
+</body>
+
+</html>

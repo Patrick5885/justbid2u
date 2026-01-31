@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Just Bid | Car Models</title>
+    <link rel="stylesheet" href="/Front_End/UI/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Just<span>Bid</span></div>
+
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Home</a></li>
+            <li><a href="stock_car_model.html"class="active">Browse Model</a></li>
+            <li><a href="auction_grades.html">Auction Grades</a></li>
+            <li><a href="verifiedAgent.html">Verified Agent</a></li>
+            <li><a href="find_us.html">Find Us Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-filter-trigger">
+        <button id="toggle-filter-btn"><i class="fas fa-sliders-h"></i> Filters & Sort</button>
+    </div>
+
+    <div class="main-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Search Inventory</h3>
+                <i class="fas fa-times" id="close-sidebar-btn"></i>
+            </div>
+            <div class="filter-group">
+                <label for="model-search">Model Name</label>
+                <div style="position: relative;">
+                    <input type="text" id="model-search" placeholder="e.g. Alphard, BMW...">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Country of Origin</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="origin" value="Japan"> Japan</label>
+                    <label><input type="checkbox" name="origin" value="UK"> UK</label>
+                    <label><input type="checkbox" name="origin" value="Australia"> Australia</label>
+                    <label><input type="checkbox" name="origin" value="South Africa"> South Africa</label>
+                </div>
+            </div>
+
+            <div class="filter-manufacture-year">
+                <label for="year">Manufacture Year</label>
+                <select id="year">
+                    <option value="">All Years</option> 
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="price">Max Price (RM)</label>
+                <input type="range" id="price" min="100000" max="1000000" step="10000" value="1000000">
+                <div class="price-labels">
+                    <span>100k</span>
+                    <span id="price-val"><i>Drag To Set Range</span>
+                    <span>1M</span>
+                </div>
+            </div>
+
+            <button class="apply-btn">Apply Search</button>
+        </aside>
+
+        <main class="content">
+            <div class="results-header">
+                <h2>All Available Units</h2>
+                <p>Browse our live premium stock</p>
+            </div>
+            <div class="model-grid" id="car-grid">
+            </div>
+        </main>
+    </div>
+    
+    <footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo">Just<span>Bid</span></div>
+            <p>Your trusted partner for direct car imports.</p>
+            <p class="footer-text">For expert assistance and inquiries, please connect with one of our <a href="verifiedAgent.html" class="footer-link">Verified Agent</a></p>        
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="stock_car_model.html">Browse Model</a></li>
+                <li><a href="auction_grades.html">Auction Grades</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 JustBid. All Rights Reserved.
+    </div>
+</footer>
+
+    <script src="/Front_End/UI/script.js"></script>
+</body>
+
+</html>
