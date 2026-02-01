@@ -400,7 +400,7 @@ async function loadCarDetails() {
         const waBtn = document.getElementById('whatsapp-btn');
         if (waBtn) {
             const message = encodeURIComponent(`Hi JustBid, I'm interested in the ${car.Year} ${car.Model_Name} (Ref: ${car.documentId}). Is it still available?`);
-            waBtn.href = `https://wa.me/60123456789?text=${message}`;
+            waBtn.href = `https://wa.me/60169333043?text=${message}`;
             waBtn.target = "_blank";
         }
 
