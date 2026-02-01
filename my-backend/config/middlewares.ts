@@ -26,8 +26,15 @@ export default [
       },
     },
   },
-  'strapi::cors',
-  'strapi::poweredBy',
+{
+  name: 'strapi::cors',
+  config: {
+    origin: ['https://patrick5885.github.io', 'http://localhost:1338'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
+    headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+    keepHeaderOnError: true,
+  },
+},  'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
   'strapi::body',
