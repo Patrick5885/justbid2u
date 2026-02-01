@@ -2,7 +2,7 @@ const STRAPI_URL = 'http://localhost:1338'; // Standard Strapi port
 const API_NAME = 'new-imported-models';
 const API_URL = window.location.hostname === 'localhost' 
   ? 'http://localhost:1338' 
-  : 'https://your-app-name.onrender.com';
+  : 'https://justbid2u.onrender.com';
 
 // 1. Scroll Animation
 const reveal = () => {
@@ -35,7 +35,7 @@ async function getCarsFromStrapi() {
             let imageUrl = "https://via.placeholder.com/400x300?text=No+Image";
             if (item.Car_Model_Gallery && item.Car_Model_Gallery.length > 0) {
                 // Strapi 5 Media fields are arrays of objects
-                imageUrl = API_URL + item.Car_Model_Gallery[0].url;
+                imageUrl = item.Car_Model_Gallery[0].url;
             }
 
             return {
@@ -410,7 +410,7 @@ async function loadCarDetails() {
         // Use Car_Model_Gallery as seen in your network response
         if (car.Car_Model_Gallery && car.Car_Model_Gallery.length > 0) {
             // Map the array to full URLs
-            slideImages = car.Car_Model_Gallery.map(img => API_URL + img.url);
+            slideImages = car.Car_Model_Gallery.map(img => img.url);
 
             // Generate HTML for thumbnails
             if (thumbContainer) {
