@@ -27,6 +27,7 @@ body {
 /* Dark Mode Overrides */
 body.dark-mode {
     --bg-color: #12141d;
+    --card-bg: #75757596;
     --text-color: #f5f5f5;
     --nav-bg: #1a1d26;
     --border-color: #333333;
