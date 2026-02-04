@@ -282,7 +282,7 @@ select, input[type="range"] { width: 100%; }
 
 .model-grid { 
     display: grid !important; 
-    background-color: var(--card-bg);
+    background-color: var(--transparent);
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2rem; 
     align-items: start;
