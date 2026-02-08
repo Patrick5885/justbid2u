@@ -870,7 +870,7 @@ home page clients pic
         right: -100%; /* Hidden off-screen by default */
         height: 100vh;
         width: 70%;
-        background: white;
+        background: var(--nav-bg);
         flex-direction: column;
         justify-content: center;
         transition: 0.4s ease-in-out;
