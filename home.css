@@ -278,13 +278,19 @@ select, input[type="range"] { width: 100%; }
     min-width: 0; /* Prevents the grid from pushing out of the container */
 }
 
-.results-header { margin-bottom: 2rem; }
+.results-header { 
+    margin-bottom: 2rem; 
+}
+
+.results-header span {
+    color: white;
+}
 
 .model-grid { 
     display: grid !important; 
     background-color: var(--transparent);
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem; 
+    gap: 20px; 
     align-items: start;
     width: 100%; 
     min-height: 400px;
@@ -804,6 +810,33 @@ home page clients pic
     font-size: 1.1rem;
 }
 
+
+/* Verified Agent Page Stylying */
+
+/* whatsapp button */
+.whatsapp-agent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+    gap: 8px;
+}
+
+.whatsapp-agent-btn:hover {
+    background-color: #128C7E; /* Darker Green on hover */
+    color: #ffffff;
+}
+
+.whatsapp-agent-btn i {
+    font-size: 1.2rem;
+}
 
 /* The Animation */
 @keyframes scroll {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">Just<span>Bid</span></div>
@@ -16,58 +18,73 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="index.html"verifiedAgent>Home</a></li>
+            <li><a href="index.html" verifiedAgent>Home</a></li>
             <li><a href="stock_car_model.html">Browse Model</a></li>
             <li><a href="auction_grades.html">Auction Grades</a></li>
             <li><a href="verifiedAgent.html">Verified Agent</a></li>
-            <li><a href="find_us.html"class="active">Find Us Now</a></li>
+            <li><a href="find_us.html" class="active">Find Us Now</a></li>
         </ul>
     </nav>
 
     <div class="main-container">
         <main class="content">
             <div class="results-header">
-                <h2>Contact Our Showroom</h2>
-                <p>Visit us in Glenmarie or drop us a message below.</p>
+                <h2>Find Us Now</h2>
+                <p><span>Your journey begins at our showroom. We look forward to welcoming you !</span></p>
             </div>
-            <div class="model-card reveal" style="max-width: 600px; margin: 0 auto; padding: 20px;">
-                <form>
-                    <div class="filter-group">
-                        <label>Name</label>
-                        <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border);">
-                    </div>
-                    <div class="filter-group">
-                        <label>Message</label>
-                        <textarea style="width: 100%; padding: 10px; border: 1px solid var(--border);" rows="5"></textarea>
-                    </div>
-                    <button class="apply-btn">Submit Enquiry</button>
-                </form>
+
+            <div class="model-card reveal" style="max-width: 900px; margin: 0 auto; padding: 20px;">
+
+                <div class="map-container"
+                    style="width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); line-height: 0;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.353381026419!2d103.7942704!3d1.5524318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6e374528c9f7%3A0xc3f872fc40eca547!2s15%2C%20Jalan%20Ros%20Merah%201%2F1%2C%20Taman%20Johor%20Jaya%2C%2081100%20Johor%20Bahru%2C%20Johor!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div style="text-align: center; padding: 10px;">
+                    <h3 style="margin-bottom: 10px; color: var(--primary);">JustBid Showroom</h3>
+                    <p style="margin-bottom: 20px; color: #555; line-height: 1.6;">
+                        15, Jalan Ros Merah 1/1, Taman Johor Jaya,<br>
+                        81100 Johor Bahru, Johor Darul Ta'zim
+                    </p>
+
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=15,+Jalan+Ros+Merah+1/1,+Taman+Johor+Jaya,+81100+Johor+Bahru,+Johor"
+                        target="_blank" class="apply-btn"
+                        style="display: inline-block; text-decoration: none; padding: 12px 30px; font-weight: 600;">
+                        <i class="fas fa-directions" style="margin-right: 8px;"></i> Get Directions
+                    </a>
+                </div>
             </div>
         </main>
     </div>
-    
+
 
     <footer class="main-footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <div class="logo">Just<span>Bid</span></div>
-            <p>Your trusted partner for direct car imports.</p>
-            <p class="footer-text">For expert assistance and inquiries, please connect with one of our <a href="verifiedAgent.html" class="footer-link">Verified Agent</a></p>        
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">Just<span>Bid</span></div>
+                <p>Your trusted partner for direct car imports.</p>
+                <p class="footer-text">For expert assistance and inquiries, please connect with one of our <a
+                        href="verifiedAgent.html" class="footer-link">Verified Agent</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="stock_car_model.html">Browse Model</a></li>
+                    <li><a href="auction_grades.html">Auction Grades</a></li>
+                    <li><a href="contact.html">Find Us Now</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="stock_car_model.html">Browse Model</a></li>
-                <li><a href="auction_grades.html">Auction Grades</a></li>
-                <li><a href="contact.html">Find Us Now</a></li>
-            </ul>
+        <div class="footer-bottom">
+            &copy; 2026 JustBid. All Rights Reserved.
         </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2026 JustBid. All Rights Reserved.
-    </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
