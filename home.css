@@ -9,8 +9,14 @@
     --card-bg: #ffffff;
     --transparent: #ffffff00;
     --button-Color : #b6b3b3; 
+    --sidebar-bg: #eeeeee;
     --footer-bg: #f8f9fa;
     --whiteColourText : #ffffff;
+    --filterbutton: #cccccc;
+    --filterbuttonBorder: #aaa9a9;
+    --filterbuttonbackground: #eeeeee;
+    --filterfontcolor: #222222;
+    --applySearchButton: #b6b3b3;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
@@ -34,6 +40,10 @@ body.dark-mode {
     --sidebar-bg: #1c1f2b;
     --footer-bg: #26272c;
     --Stock-filter-bg: #75757596;
+    --filterbutton: #424242;
+    --filterbuttonbackground: #12141d;
+    --filterfontcolor: #f5f5f5;
+    --applySearchButton: rgb(218, 0, 0);
 }
 
 /* Container for the toggle */
@@ -213,7 +223,7 @@ body {
 
 
 .filter-manufacture-year {
-margin-top: 2rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -224,7 +234,7 @@ margin-top: 2rem;
 .filter-manufacture-year label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--whiteColourText);
+    color: var(--text-color);
     margin-left: 4px; /* Aligns slightly with the rounded box */
 }
 
@@ -266,7 +276,7 @@ select, input[type="range"] { width: 100%; }
 
 .apply-btn {
     
-    font-size: 14px; width: 100%; padding: 12px; background: var(--button-Color); color: var(--text-color);
+    font-size: 14px; width: 100%; padding: 12px; background: var(--applySearchButton); color: var(--text-color);
     border: none; border-radius: 25px; cursor: pointer; font-weight: 600;
 }
 
@@ -323,9 +333,20 @@ select, input[type="range"] { width: 100%; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
 /* --- MOBILE & TABLET STYLES --- */
-.mobile-filter-trigger { display: none; padding: 10px 5%; background: #fff; border-bottom: 1px solid var(--border); }
-#toggle-filter-btn { width: 100%; padding: 12px; background: #fff; border: 1px solid var(--text-dark); border-radius: 5px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; }
-
+.mobile-filter-trigger { display: none; padding: 10px 5%; background: var(--filterbuttonbackground); border-bottom: 1px solid var(--border); }
+#toggle-filter-btn {
+    width: 100%;
+    padding: 12px;
+    color: var(--text-color);
+    background: var(--filterbutton);
+    border: 1px solid var(--filterbuttonBorder);
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
 /* --- Navigation Links Styling --- */
 .nav-links a {
@@ -838,6 +859,64 @@ home page clients pic
     font-size: 1.2rem;
 }
 
+/* find us page */
+
+/* Container for the showroom card */
+.showroom-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Map specific styling */
+.map-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    line-height: 0;
+}
+
+.map-frame {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Location details styling */
+.location-info {
+    text-align: center;
+    padding: 10px;
+}
+
+.location-info h3 {
+    margin-bottom: 10px;
+    color: var(--primary); /* Using your existing primary variable */
+}
+
+.address-text {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Button specific tweaks */
+.directions-btn {
+    background-color: var(--honda-red);
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+.directions-btn i {
+    margin-right: 8px;
+}
+
+
+
 /* The Animation */
 @keyframes scroll {
     0% {
@@ -883,7 +962,7 @@ home page clients pic
     .sidebar {
         position: fixed; top: 0; left: -100%; width: 80%; max-width: 300px;
         height: 100vh; z-index: 2000; box-shadow: 10px 0 30px rgba(0,0,0,0.2);
-        background-color: #eeeeee; border-radius: 0;
+        background-color: var(--sidebar-bg); border-radius: 0;
     }
     .sidebar.active { left: 0; }
     #close-sidebar-btn { display: block; }
