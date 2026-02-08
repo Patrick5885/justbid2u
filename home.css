@@ -895,6 +895,9 @@ home page clients pic
 
 
 @media (max-width: 480px) {
+    .nav-links{
+        background: var(--nav-bg);
+    }
     .model-grid { grid-template-columns: 1fr; }
     .results-header h2 { font-size: 1.3rem; }
 }
